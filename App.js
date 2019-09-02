@@ -29,7 +29,7 @@ export default class App extends Component {
     return (
       <View style={styles.wrapper}>
         <ViroARSceneNavigator
-          {...this.state.navigator}
+          {...this.state.navigatorProps}
           initialScene={{
             scene: () => <ARScene pauseUpdates={this.state.pauseUpdates} />,
           }}
