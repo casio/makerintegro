@@ -1,0 +1,23 @@
+# Setup
+
+`npm i`
+
+Install platform specific tools, android: android-studio, sdk tools etc.
+
+# Run
+
+## Approach 1, lowest effort:
+
+ - Install Viro Media App
+ - `npm run start`
+ - Connect to testbed in Viro Media, enter local ip or ngrok
+
+## Approach 2, install debug
+
+ - Create debug keystore:
+   - `keytool -genkey -v -keystore android/app/debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000`
+ - `react-native run-android`
+
+## Approach 3, install production
+ - Get dev cert and drop in `android/app`
+ - `react-native run-android --variant production`
