@@ -42,8 +42,11 @@ export default class HelloWorldSceneAR extends Component {
           pauseUpdates={this.props.pauseUpdates}>
           <ViroNode>
             <Viro3DObject
-              source={require('./res/latzhose-png.obj')}
-              resources={[require('./res/latzhose-72dpi.png')]}
+              source={require('./res/latzhose-object.obj')}
+              resources={[
+                require('./res/latzhose-texture.mtl'),
+                require('./res/latzhose.png')
+              ]}
               type="OBJ"
             />
           </ViroNode>
